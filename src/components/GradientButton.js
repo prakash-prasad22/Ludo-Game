@@ -30,6 +30,7 @@ const GradientButton = ({title , onPress , iconColor = '#d5be3e'}) => {
             : title === 'NEW GAME' ? <Ionicons name='play-circle' color={iconColor} size={iconSize}/>
             : title === 'VS CPU' ? <Ionicons name='desktop' color={iconColor} size={iconSize}/>
             : title === '2 VS 2' ? <Ionicons name='people' color={iconColor} size={iconSize}/>
+            : title === "HOME" ? <Ionicons name='home' color={iconColor} size={iconSize}/>
             : <Ionicons name='person-4' color={iconColor} size={iconSize}/>
           }
           <Text style={styles.buttonText}>{title}</Text>
@@ -69,7 +70,7 @@ const styles = StyleSheet.create({
     },
     button : {
       height : 45,
-      borderRadius : 5, 
+      borderRadius : 2, 
       borderWidth : 2,
       borderColor : '#000',
       flexDirection : 'row',
