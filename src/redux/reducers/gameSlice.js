@@ -6,9 +6,12 @@ export const gameSlice = createSlice({
   initialState: initialState,
   reducers: {
     resetGame : () => initialState,
-  }
+    announceWinner : (state , action) => {
+      state.winner = action.payload;
+    },
+  },
 });
 
-export const { resetGame } = gameSlice.actions;
+export const { resetGame, announceWinner } = gameSlice.actions;
 
 export default gameSlice.reducer;
